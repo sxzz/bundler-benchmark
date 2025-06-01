@@ -4,6 +4,7 @@ import { build as buildRslib } from "./bundlers/rslib";
 import { build as buildTsdown } from "./bundlers/tsdown";
 import { build as buildTsup } from "./bundlers/tsup";
 import { build as buildUnbuild } from "./bundlers/unbuild";
+import { build as buildBunup } from "./bundlers/bunup";
 import { type BenchmarkResults, MetricsUtil } from "./util/MetricsUtil";
 
 // Define bundlers declaratively
@@ -30,6 +31,10 @@ const bundlers = [
 	{
 		name: "rslib",
 		build: buildRslib,
+	},
+	{
+		name: "bunup",
+		build: buildBunup,
 	},
 ];
 
