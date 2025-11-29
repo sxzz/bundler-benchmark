@@ -1,12 +1,6 @@
 {
-  "editor.formatOnSave": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  }
+	"editor.formatOnSave": true,
+	"[typescript][javascript][vue]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }
