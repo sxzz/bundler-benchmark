@@ -27,8 +27,8 @@
       <li><a href="https://bunup.dev/" target="_blank">bunup</a></li>
     </ul>
     <p>
-      Benchmark was run on a MacBook M1 Pro with 16GB of RAM, using Node.js
-      v22.2.0 and Bun v1.2.15 (for bunup).
+      Benchmark was run on a MacBook M1 Max with 32GB of RAM, using Node.js
+      v24.11.1 and Bun v1.3.0 (for bunup).
       <br />
       Source code for the benchmark is available on
       <a
@@ -80,7 +80,8 @@ const featureList: Option[] = [
 	{ value: "sourcemap", label: "Source Maps" },
 	{ value: "dts", label: "DTS" },
 ];
-const selectedFeature = ref(featureList[0].value);
+// biome-ignore lint/style/noNonNullAssertion: non-null
+const selectedFeature = ref(featureList[0]!.value);
 
 // Execution time bar chart
 const executionTimeCanva = ref<HTMLCanvasElement | null>(null);
