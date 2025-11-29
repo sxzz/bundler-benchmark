@@ -12,15 +12,10 @@ export const build = async (options: BundlerOptions) => {
 		entry: entryFile,
 		outDir: outputDir,
 		format: options.cjs ? "cjs" : "esm",
-		target: "esnext",
-		clean: true,
+		target: false,
 		sourcemap: options.sourcemap ?? false,
 		minify: options.minify ?? false,
-		silent: true,
-		dts: options.dts
-			? {
-					isolatedDeclarations: options.isolatedDeclarations ?? true,
-				}
-			: false,
+		logLevel: "silent",
+		dts: options.dts ? { oxc: options.isolatedDeclarations ?? true } : false,
 	});
 };

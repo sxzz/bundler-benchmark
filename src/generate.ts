@@ -89,7 +89,7 @@ const generateProject = async (config: ProjectConfig) => {
 
 // Main function
 const generate = async () => {
-	const basePath = path.join(__dirname, "../", "projects");
+	const basePath = path.join(import.meta.dirname, "../", "projects");
 
 	const projects: ProjectConfig[] = [
 		{
